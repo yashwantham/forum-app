@@ -1,24 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
+import { Topbar } from './components/Topbar';
+import { Leftaside } from './components/Leftaside';
+import { HomePage } from './pages/HomePage';
+import { Rightaside } from './components/Rightaside';
+import { Route, Routes } from 'react-router-dom';
+import { CommentPage } from './pages/CommentPage';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="App">
+      <Topbar/>
+      <div className="main">
+      <Leftaside/>
+      <Routes>
+        <Route path="/" element={<HomePage/>}/>
+        <Route path="/comment" element={<CommentPage/>}/>
+      </Routes>
+      <Rightaside/>
+      </div>
+      </div>
+    </>
   );
 }
 

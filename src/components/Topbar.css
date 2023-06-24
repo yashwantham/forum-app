@@ -1,0 +1,10 @@
+.topbar {
+    color: var(--primary-color);
+    text-align: left;
+    border-bottom: 1px solid black;
+}
+
+h1 {
+    margin-left: 3rem;
+    margin-top: 1rem;
+}
