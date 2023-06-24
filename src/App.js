@@ -16,7 +16,7 @@ function App() {
       <Leftaside/>
       <Routes>
         <Route path="/" element={<HomePage/>}/>
-        <Route path="/comment" element={<CommentPage/>}/>
+        <Route path="/comment/:postid" element={<CommentPage/>}/>
       </Routes>
       <Rightaside/>
       </div>
